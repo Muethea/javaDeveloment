@@ -1,24 +1,44 @@
 package javaDeveloment;
 
+import java.util.Scanner;
+
 public class exercicio1 {
 	public static void main(String[] args) {
+	
+		Scanner sc = new Scanner(System.in);
 		
-		String product1 = "Computer";
-		String product2 = "Office desk";
+		int number1, number2, number3;
 		
-		int age = 30;
-		int code = 5290;
-		char gender = 'F';
+		System.out.println("Digite um numero: ");
+		number1 = sc.nextInt();
 		
-		double price1 = 2100.0;
-		double price2 = 650.50;
-		double measure = 53.234567;
+		System.out.println("Digite um numero: ");
+		number2 = sc.nextInt();
 		
-		System.out.println("Produts: ");
-		System.out.printf("%s, which price is %f \n", product1, price1);
-		System.out.printf("%s, which price is %f $ \n", product2, price2);
+		System.out.println("Digite um numero: ");
+		number3 = sc.nextInt();
 		
-		System.out.printf("Record: %d years old, code %d and gerder: %c ", age, code, gender);
+		int heigher = max(number1, number2, number3);
 		
+		showResult(heigher);
+		
+		
+	}
+	
+	public static int max(int x, int y, int z) {
+		int aux; 
+		
+		if (x >y && x>z) {
+			aux = x;
+		}else if(y>z) {
+			aux = y;
+		}else {
+			aux = z;
+		}
+		return aux;
+	}
+	
+	public static void showResult(int value) {
+		System.out.println("Higher = "+ value);
 	}
 }

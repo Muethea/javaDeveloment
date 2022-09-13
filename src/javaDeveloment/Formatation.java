@@ -4,13 +4,10 @@ import java.util.Locale;
 
 /**
  * @author Fernando Muethea
- *
  */
 public class Formatation {
 
-	/**
-	 * @param args
-	 */
+
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		double x = 23.12122;
